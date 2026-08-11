@@ -106,3 +106,25 @@ butenj{
 
 
 
+
+
+
+
+
+
+
+
+
+.nxt1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: aqua;
+}
+
+
+
+

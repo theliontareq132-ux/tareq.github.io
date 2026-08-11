@@ -1,0 +1,188 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prayer Times - Jordan</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #071e26, #123c32);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #cccccc;
+            margin-bottom: 20px;
+        }
+
+        .clock {
+            font-size: 55px;
+            font-family: monospace;
+            color: #00ff88;
+            background: #111;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px #00ff88;
+        }
+
+        .prayer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(255, 255, 255, 0.1);
+
+            padding: 18px 25px;
+            margin: 10px 0;
+
+            border-radius: 12px;
+
+            font-size: 22px;
+        }
+
+        .prayer-name {
+            font-weight: bold;
+        }
+
+        .prayer-time {
+            color: #00ff88;
+            font-family: monospace;
+        }
+
+        .back-button {
+            margin-top: 25px;
+            padding: 12px 25px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: #00ff88;
+
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: #111;
+        }
+
+        .back-button:hover {
+            background: #00cc6a;
+        }
+    </style>
+
+
+    <!-- JavaScript at the top -->
+    <script>
+
+        function updateClock() {
+
+            const now = new Date();
+
+            let hours = String(now.getHours()).padStart(2, "0");
+            let minutes = String(now.getMinutes()).padStart(2, "0");
+            let seconds = String(now.getSeconds()).padStart(2, "0");
+
+            document.getElementById("clock").textContent =
+                hours + ":" + minutes + ":" + seconds;
+        }
+
+        setInterval(updateClock, 1000);
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>🕌 Prayer Times</h1>
+
+        <h2>Amman, Jordan</h2>
+
+        <!-- Live Clock -->
+        <div class="clock" id="clock">
+            00:00:00
+        </div>
+
+
+        <!-- Fajr -->
+        <div class="prayer">
+            <span class="prayer-name">Fajr</span>
+            <span class="prayer-time">4:27 AM</span>
+        </div>
+
+
+        <!-- Dhuhr -->
+        <div class="prayer">
+            <span class="prayer-name">Dhuhr</span>
+            <span class="prayer-time">12:42 PM</span>
+        </div>
+
+
+        <!-- Asr -->
+        <div class="prayer">
+            <span class="prayer-name">Asr</span>
+            <span class="prayer-time">4:22 PM</span>
+        </div>
+
+
+        <!-- Maghrib -->
+        <div class="prayer">
+            <span class="prayer-name">Maghrib</span>
+            <span class="prayer-time">7:25 PM</span>
+        </div>
+
+
+        <!-- Isha -->
+        <div class="prayer">
+            <span class="prayer-name">Isha</span>
+            <span class="prayer-time">8:55 PM</span>
+        </div>
+
+
+        <!-- Back Button -->
+        <button class="back-button">
+            <a href="./index.html">Back</a>
+        </button>
+
+    </div>
+
+
+    <!-- Start the clock -->
+    <script>
+        updateClock();
+    </script>
+
+</body>
+
+</html>
+```
