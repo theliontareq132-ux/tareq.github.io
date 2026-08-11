@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        let count = 0;
+        function myfunction() {
+        
+           count = count + 1;
+           document.getElementById("counter").innerHTML = count;
+        }
+
+
+
+           function resetCounter() {
+            count = 0;
+            document.getElementById("counter").innerHTML = count;
+           }
+
+        
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="text">
+    <h1>Welcome to my website!</h1>
+    <p>This is to make people asteghfar.</p>
+    </div>
+    <div class="butenjall">
+    <div class="butenj">
+    <button onclick="myfunction()">click: <span id="counter">0</span></button>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="butenj2">
+<button onclick="resetCounter()">Reset</button>
+</div>
+</div>
+
+
+<body class="bg"></body>
+    
+</body>
+</html>
